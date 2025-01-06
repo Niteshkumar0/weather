@@ -103,6 +103,36 @@ button{
     color: black;
 }
 
+.mainSearchIcon{
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+}
+
+.mainSearch div {
+    background-color: rgb(211, 209, 209);
+    width: 230px;
+    border-radius: 10px;
+    height: 38px;
+    padding: 10px;
+
+}
+
+.mainSearch{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.mainSearch div input{
+    background-color: rgb(211, 209, 209);
+    height: 20px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    width: 80%;
+}
+
 @media (min-width:593px) {
     .navbarContainer .navbar{
         display: flex;
