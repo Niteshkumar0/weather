@@ -11,8 +11,11 @@
 <script src="./js.js"></script>
 </head>
 <body>
+
    <div class="mainContainer">
-    
+    <video autoplay muted loop class="mainBackgroundVideo">
+        <source src="backgroud.mp4" type="video/mp4"/>
+    </video>
     <!-- NAVBAR CONTAINER -->
     <div class="navbarContainer">
         <div class="logo">Weather</div>
@@ -20,8 +23,9 @@
                 <a href="#" class="animation">About us</a>
                 <a href="#" class="animation">Gallery</a>
                 <a href="#" class="animation">Contact</a>
-                <a href="#" class="animation">Registration</a>
                 <button><a href="./registration.html">sign up</a></button>
+                <button><a href="./login.html">Login In</a></button>
+
         </div>
     </div>
 
@@ -30,11 +34,59 @@
         <div class="dataBox">
             <div class="mainSearch">
                 <div>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="mainSearchIcon"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>              
-                <input type="search" name="search" id="search">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="mainSearchIcon"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>              
+                    <input type="search" name="search" id="search">
+                </div>
+                <button onclick="dynamic()">search</button>
             </div>
+
+            <!-- DYNAMIC WEATHER -->
+            <div class="mainDynamicWeather" style="display: none;" id="dynamicWeather">
+                <div class="mainDynamicWeatherBox">
+                    <h2 id="mainDynamicWeatherHeading"></h2>
+                    <p id="mainDynamicWeatherCondition"></p>
+                    <p id="mainDynamicWeatherTemperature"> </p>
+                    <p id="mainDynamicWeatherWind"></p>
+                    <p id="mainDynamicWeatherHumidity"></p>
+                </div>
             </div>
-        </div>
+
+            <!-- karachi weather  -->
+            <div class="mainKarachiWeather">
+                <div class="mainKarachiWeatherBox">
+                    <h2 id="mainKarachiWeatherHeading"></h2>
+                    <p id="mainKarachiWeatherCondition"></p>
+                    <p id="mainKarachiWeatherTemperature"> </p>
+                    <p id="mainKarachiWeatherWind"></p>
+                    <p id="mainKarachiWeatherHumidity"></p>
+                </div>
+            </div>
+
+            <!-- LAHORE WEATHER -->
+            <div class="mainLahoreWeather">
+                <div class="mainLahoreWeatherBox">
+                    <h2 id="mainLahoreWeatherHeading"></h2>
+                    <p id="mainLahoreWeatherCondition"></p>
+                    <p id="mainLahoreWeatherTemperature"> </p>
+                    <p id="mainLahoreWeatherWind"></p>
+                    <p id="mainLahoreWeatherHumidity"></p>
+                </div>
+            </div>
+
+            <!-- DAHARKI WEATHER -->
+            <div class="mainDaharkiWeather">
+                <div class="mainDaharkiWeatherBox">
+                    <h2 id="mainDaharkiWeatherHeading"></h2>
+                    <p id="mainDaharkiWeatherCondition"></p>
+                    <p id="mainDaharkiWeatherTemperature"> </p>
+                    <p id="mainDaharkiWeatherWind"></p>
+                    <p id="mainDaharkiWeatherHumidity"></p>
+                </div>
+            </div>
+
+
+    </div>
+
     </div>
 
     <!-- FOOTER CONATAINER -->
