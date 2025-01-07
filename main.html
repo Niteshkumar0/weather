@@ -13,9 +13,11 @@
 <body>
 
    <div class="mainContainer">
-    <video autoplay muted loop class="mainBackgroundVideo">
+    <!-- <video autoplay muted loop class="mainBackgroundVideo">
         <source src="backgroud.mp4" type="video/mp4"/>
-    </video>
+    </video> -->
+
+
     <!-- NAVBAR CONTAINER -->
     <div class="navbarContainer">
         <div class="logo">Weather</div>
@@ -25,9 +27,23 @@
                 <a href="#" class="animation">Contact</a>
                 <button><a href="./registration.html">sign up</a></button>
                 <button><a href="./login.html">Login In</a></button>
-
+        </div>
+        <div id="hambuger" class="hamburger">
+            <img src="./hamburger.png" alt="hamburger" width="40" height="40" id="hambugerImage" onclick="showHamburgerNavbar()">
+            <img src="./cross.jpg" alt="" width="40" height="40" id="hambugerCrossImage" onclick="hideHamburgerNavbar()">
         </div>
     </div>
+
+    <div class="hamburgerNavbar" id="hamburgerNavbar">
+        <div>
+        <a href="#" class="animation">About us</a>
+        <a href="#" class="animation">Gallery</a>
+        <a href="#" class="animation">Contact</a>
+        <button><a href="./registration.html">sign up</a></button>
+        <button><a href="./login.html">Login In</a></button>
+        </div>
+    </div>
+
 
     <!-- WEATHER SHOWING BOX -->
     <div class="dataContainer">
@@ -40,6 +56,7 @@
                 <button onclick="dynamic()">search</button>
             </div>
 
+            <div class="weatherContainer">
             <!-- DYNAMIC WEATHER -->
             <div class="mainDynamicWeather" style="display: none;" id="dynamicWeather">
                 <div class="mainDynamicWeatherBox">
@@ -48,6 +65,9 @@
                     <p id="mainDynamicWeatherTemperature"> </p>
                     <p id="mainDynamicWeatherWind"></p>
                     <p id="mainDynamicWeatherHumidity"></p>
+                </div>
+                <div id="wrongCity" style="display: none;">
+                    <p>oops city can't find</p>
                 </div>
             </div>
 
@@ -83,6 +103,7 @@
                     <p id="mainDaharkiWeatherHumidity"></p>
                 </div>
             </div>
+        </div>
 
 
     </div>

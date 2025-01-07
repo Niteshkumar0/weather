@@ -1,5 +1,14 @@
 let endPoint = "c46160aef01bb48121506497335c79ef"
 
+function toggleNavbar() {
+    if (window.innerWidth >= 650) {
+        document.getElementById('hamburgerNavbar').style.display = "none";
+    } 
+}
+
+
+
+
 let fetching = async () => {
     let res;
     let data = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=karachi&appid=${endPoint}`)
@@ -8,7 +17,7 @@ let fetching = async () => {
         console.log(res);
         document.getElementById("mainKarachiWeatherHeading").innerHTML = res.name
         document.getElementById("mainKarachiWeatherCondition").innerHTML = '<strong>Condition</strong> : ' + res.weather[0].main;
-        document.getElementById("mainKarachiWeatherTemperature").innerHTML = '<strong>Temperature</strong>  : ' + Math.floor((res.main.temp -273)) + '<sup>o</sup>';
+        document.getElementById("mainKarachiWeatherTemperature").innerHTML = '<strong>Temperature</strong>  : ' + Math.floor((res.main.temp -273)) + '<sup>o</sup>' + 'C';
         document.getElementById("mainKarachiWeatherWind").innerHTML = '<strong>Wind Speed</strong> : ' + res.wind.speed;
         document.getElementById("mainKarachiWeatherHumidity").innerHTML = ' <strong>Humidity</strong> : ' + res.main.humidity 
 
@@ -20,7 +29,7 @@ let fetching = async () => {
         lahoreRes = await lahoreData.json();
         document.getElementById("mainLahoreWeatherHeading").innerHTML = lahoreRes.name
         document.getElementById("mainLahoreWeatherCondition").innerHTML = '<strong>Condition</strong> : ' + lahoreRes.weather[0].main;
-        document.getElementById("mainLahoreWeatherTemperature").innerHTML = '<strong>Temperature</strong>  : ' + Math.floor((lahoreRes.main.temp -273)) + '<sup>o</sup>';
+        document.getElementById("mainLahoreWeatherTemperature").innerHTML = '<strong>Temperature</strong>  : ' + Math.floor((lahoreRes.main.temp -273)) + '<sup>o</sup>' + 'C';
         document.getElementById("mainLahoreWeatherWind").innerHTML = '<strong>Wind Speed</strong> : ' + lahoreRes.wind.speed;
         document.getElementById("mainLahoreWeatherHumidity").innerHTML = ' <strong>Humidity</strong> : ' + lahoreRes.main.humidity 
 
@@ -32,19 +41,12 @@ let fetching = async () => {
         daharkiRes = await daharkiData.json();
         document.getElementById("mainDaharkiWeatherHeading").innerHTML = daharkiRes.name
         document.getElementById("mainDaharkiWeatherCondition").innerHTML = '<strong>Condition</strong> : ' + daharkiRes.weather[0].main;
-        document.getElementById("mainDaharkiWeatherTemperature").innerHTML = '<strong>Temperature</strong>  : ' + Math.floor((daharkiRes.main.temp -273)) + '<sup>o</sup>';
+        document.getElementById("mainDaharkiWeatherTemperature").innerHTML = '<strong>Temperature</strong>  : ' + Math.floor((daharkiRes.main.temp -273)) + '<sup>o</sup>' + 'C';
         document.getElementById("mainDaharkiWeatherWind").innerHTML = '<strong>Wind Speed</strong> : ' + daharkiRes.wind.speed;
         document.getElementById("mainDaharkiWeatherHumidity").innerHTML = ' <strong>Humidity</strong> : ' + daharkiRes.main.humidity 
 
     }
 }
-
-fetching()
-
-document.getElementById('search').addEventListener('input', async function (event) {
-
-})
-
 
 async function dynamic(event) {
     
@@ -63,13 +65,33 @@ async function dynamic(event) {
         // document.getElementById('dynamicWeatherBox')[0].style.height = '220px';
         document.getElementById("mainDynamicWeatherHeading").innerHTML = randomRes.name
         document.getElementById("mainDynamicWeatherCondition").innerHTML = '<strong>Condition</strong> : ' + randomRes.weather[0].main;
-        document.getElementById("mainDynamicWeatherTemperature").innerHTML = '<strong>Temperature</strong>  : ' + Math.floor((randomRes.main.temp -273)) + '<sup>o</sup>';
+        document.getElementById("mainDynamicWeatherTemperature").innerHTML = '<strong>Temperature</strong>  : ' + Math.floor((randomRes.main.temp -273)) + '<sup>o</sup>' + 'C';
         document.getElementById("mainDynamicWeatherWind").innerHTML = '<strong>Wind Speed</strong> : ' + randomRes.wind.speed;
         document.getElementById("mainDynamicWeatherHumidity").innerHTML = ' <strong>Humidity</strong> : ' + randomRes.main.humidity 
     }else if(randomData.status == 404){
-        document.getElementById('dynamicWeather').style.display = 'block'
-        document.getElementById("mainDynamicWeatherHeading").innerHTML = 'oops! sorry city cant find';
-        document.getElementById('dynamicWeatherBox')[0].style.height = '180px';
-
+        document.getElementById('dynamicWeather').style.display = 'none';
+        document.getElementById('wrongCity').style.display = 'block';
     }
 }
+
+
+function showHamburgerNavbar(){
+    document.getElementById('hamburgerNavbar').style.display = "block";
+    document.getElementById('hambugerCrossImage').style.display = 'block'
+    document.getElementById('hambugerImage').style.display = "none";
+
+}
+
+function hideHamburgerNavbar(){
+    document.getElementById('hamburgerNavbar').style.display = "none";
+    document.getElementById('hambugerCrossImage').style.display = 'none'
+    document.getElementById('hambugerImage').style.display = 'block';
+}
+
+fetching()
+// Run the function once when the script loads to set the initial state
+toggleNavbar();
+
+// Add an event listener to the window resize event
+window.addEventListener('resize', toggleNavbar);
+
