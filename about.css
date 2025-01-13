@@ -1,0 +1,226 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(239, 232, 232);
+}
+.MainQuestionContainer{
+    padding-top: 100px;
+}
+.navbarContainer{
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    position:absolute;
+}
+
+.mainContainer .logo{
+    font-family: "Dancing Script", serif;
+    font-size: 30px;
+
+}
+
+.navbarContainer .navbar{
+    display: none;
+}
+
+a{
+    text-decoration: none;
+}
+.Logout{
+    background-color: black;
+    color: wheat;
+    height: 27px;
+}
+
+#LogoutButton1 ,#LogoutButton2{
+    display: none;
+}
+button{
+    width: 100px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.animation::after{
+    content: "";
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: black;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;  
+}
+
+.animation:hover::after{
+    transform: scaleX(1);
+ }
+ 
+ .hamburgerNavbar{
+    background-color: antiquewhite;
+    padding-top: 70px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: fixed; /* Position it outside the .dataContainer */
+    top: 0%; /* Adjust as needed */
+    z-index: 10;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hamburgerNavbar div{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
+    gap: 20px;
+    font-size: 20px;
+    padding-top: 50px;
+    padding-left: 50px;
+}
+
+.hamburgerNavbar div button{
+    padding: 5px;
+}
+
+.hamburgerNavbar div a{
+    color: black;
+}
+
+#hamburgerNavbar{
+    display: none;
+
+}
+
+#hambugerCrossImage{
+    display: none;
+}
+
+ /* OVER */
+.AboutQuestion {
+    margin-bottom: 14px;
+    font-size: 26px;
+    /* margin-left: 14px; */
+    text-align: center;
+}
+.AboutParagraph {
+    margin-bottom: 34px;
+    margin-left: 4px;
+    font-size: 15px;
+    word-spacing: 1px;
+    margin-left: 10px;
+    /* text-align: center; */
+    text-align: left;
+    font-family: "Open Sans", serif;
+    margin-right: 3px;
+}
+.AboutSubtopics {
+    margin-bottom: 22px;
+    margin-left: 8px; 
+    font-size: 15px;
+    font-family: "Open Sans", serif;
+}
+.AboutfooterContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 40%;
+    width: 100%;
+    gap: 30px;
+    padding: 40px 0;
+    position: absolute;
+    background-color: white;
+}
+
+.AboutfooterContainer .AboutfooterLogo{
+    font-size: 30px;
+    font-family: "Dancing Script", serif;
+}
+.AboutfooterContainer .AboutfooterNavbar{
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+    font-size: 18px;
+    text-align: center;
+}
+.AboutfooterContainer .AboutfooterNavbar a{
+    color: black;
+    text-decoration: none;
+}
+.AboutLine {
+    margin-bottom: 25px;
+    color: gray;
+}
+@media (min-width:600px) {
+    .AboutfooterContainer .AboutfooterNavbar{
+        flex-direction: row;
+        gap: 20px;
+    }
+    .AboutfooterContainer {
+        min-height: 0%;
+    }
+}
+@media (min-width:555px) {
+    .NavbarAboutus {
+        height: 48px;
+    }
+    .AboutParagraph {
+        font-size: 16px;
+    }
+    .AboutSubtopics {
+        font-size: 16px;
+    }
+}
+
+@media (min-width:650px) {
+    .navbarContainer .navbar{
+        display: flex;
+        gap: 11px;
+        font-size: 16px;
+    }
+
+    .navbarContainer{
+        padding: 0 30px;
+    }
+
+
+    .footerContainer .footerNavbar{
+        flex-direction: row;
+        gap: 20px;
+
+    }
+
+    .footerContainer {
+        height: 27%;
+        
+    }
+
+    .hamburger{
+        display: none;
+    }
+    
+}
+
+@media (min-width:780px) {
+    .navbarContainer .navbar{
+        gap: 15px;
+        font-size: 18px;
+    }
+}

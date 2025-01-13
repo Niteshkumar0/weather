@@ -1,12 +1,5 @@
+
 let endPoint = "c46160aef01bb48121506497335c79ef"
-
-function toggleNavbar() {
-    if (window.innerWidth >= 650) {
-        document.getElementById('hamburgerNavbar').style.display = "none";
-    } 
-}
-
-
 
 
 let fetching = async () => {
@@ -14,7 +7,6 @@ let fetching = async () => {
     let data = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=karachi&appid=${endPoint}`)
     if (data) {
         res = await data.json();
-        console.log(res);
         document.getElementById("mainKarachiWeatherHeading").innerHTML = res.name
         document.getElementById("mainKarachiWeatherCondition").innerHTML = '<strong>Condition</strong> : ' + res.weather[0].main;
         document.getElementById("mainKarachiWeatherTemperature").innerHTML = '<strong>Temperature</strong>  : ' + Math.floor((res.main.temp -273)) + '<sup>o</sup>' + 'C';
@@ -46,6 +38,26 @@ let fetching = async () => {
         document.getElementById("mainDaharkiWeatherHumidity").innerHTML = ' <strong>Humidity</strong> : ' + daharkiRes.main.humidity 
 
     }
+
+    let local =await localStorage.getItem("username");
+    if(local){
+    document.getElementById('mainLoginButton1').style.display = 'none'
+    document.getElementById('mainLoginButton2').style.display = 'none'
+    document.getElementById('mainRegisterButton1').style.display = 'none'
+    document.getElementById('mainRegisterButton2').style.display = 'none'
+    document.getElementById('mainLogoutButton1').style.display = 'block'
+    document.getElementById('mainLogoutButton2').style.display='block';
+}
+}
+
+function logout() {
+    localStorage.clear();
+    document.getElementById('mainLogoutButton1').style.display = 'none'
+    document.getElementById('mainLogoutButton2').style.display='none';
+    document.getElementById('mainLoginButton1').style.display = 'block'
+    document.getElementById('mainLoginButton2').style.display = 'block'
+    document.getElementById('mainRegisterButton1').style.display = 'block'
+    document.getElementById('mainRegisterButton2').style.display = 'block'
 }
 
 async function dynamic(event) {
@@ -74,9 +86,11 @@ async function dynamic(event) {
     }
 }
 
+fetching()
+
 
 function showHamburgerNavbar(){
-    document.getElementById('hamburgerNavbar').style.display = "block";
+    document.getElementById('hamburgerNavbar').style.display = 'block';
     document.getElementById('hambugerCrossImage').style.display = 'block'
     document.getElementById('hambugerImage').style.display = "none";
 
@@ -88,10 +102,81 @@ function hideHamburgerNavbar(){
     document.getElementById('hambugerImage').style.display = 'block';
 }
 
-fetching()
-// Run the function once when the script loads to set the initial state
-toggleNavbar();
 
-// Add an event listener to the window resize event
-window.addEventListener('resize', toggleNavbar);
+//BACKEND START HERE 
 
+async function sendRegisterData(){
+    let username = document.getElementById("Username").value;
+    let email = document.getElementById("Email").value;
+    let password = document.getElementById("Password").value;
+    let confirmPassword = document.getElementById("ConfirmPassword").value;
+
+    let user = {
+        username,
+        email,
+        password,confirmPassword
+    }
+
+    try {
+        let res = await fetch('http://localhost:3001/register',{
+        method:'POST',
+        headers:{
+            'Content-Type':'application/json'
+        },
+        body:JSON.stringify(user)
+        })
+       
+        if(res.ok){
+            let data = await res.json()
+            alert(data.message)
+            window.location.href  = "http://127.0.0.1:5500/weather/login.html"
+            
+        }else{
+            let error =  await res.text()
+            alert(error)
+        }
+
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+
+async function LoginData() {
+    let username = document.getElementById("Username").value;
+    let email = document.getElementById("Email").value;
+    let password = document.getElementById("Password").value;
+
+    let user = {
+        username,
+        email,
+        password
+    }
+
+
+    // console.log(user)
+
+    try {
+        let res = await fetch('http://localhost:3001/login',{
+        method:'POST',
+        headers:{
+            'Content-Type':'application/json'
+        },
+        body:JSON.stringify(user)
+        })
+       
+        if(res.ok){
+            let data = await res.json()
+            alert(data.message)
+            localStorage.setItem('username',data.name)
+            window.location.href  = "http://127.0.0.1:5500/weather/main.html"
+            
+        }else{
+            let error =  await res.text()
+            alert(error)
+        }
+
+    } catch (error) {
+        console.log(error)
+    }
+}

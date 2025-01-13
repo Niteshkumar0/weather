@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./contact.css">
+</head>
+
+<body>
+    <div class="navbarContainer">
+        <div class="logo">Weather</div>
+        <div class="navbar">
+                <a href="./about.html" class="animation">About us</a>
+                <a href="#" class="animation">Gallery</a>
+                <a href="#" class="animation">Contact</a>
+                <button id="mainRegisterButton1"><a href="./registration.html">sign up</a></button>
+                <button id="mainLoginButton1"><a href="./login.html">Login In</a></button>
+                <button id="mainLogoutButton1" class="Logout" onclick="logout()">Logout</button>
+        </div>
+        <div id="hambuger" class="hamburger">
+            <img src="./hamburger.png" alt="hamburger" width="40" height="40" id="hambugerImage" onclick="showHamburgerNavbar()">
+            <img src="./cross.jpg" alt="" width="40" height="40" id="hambugerCrossImage" onclick="hideHamburgerNavbar()">
+        </div>
+    </div>
+
+    <div class="hamburgerNavbar" id="hamburgerNavbar">
+        <div>
+        <a href=". /about.html" class="animation">About us</a>
+        <a href="#" class="animation">Gallery</a>
+        <a href="#" class="animation">Contact</a>
+        <button id="mainRegisterButton2"><a href="./registration.html">sign up</a></button>
+        <button id="mainLoginButton2"><a href="./login.html">Login In</a></button>
+        <button id="mainLogoutButton2" class="Logout" onclick="logout()">Logut</button>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="container2">
+            <div class="header">
+                <h2>Any Suggestion</h2>
+            </div>
+            <div class="line"></div>
+
+            <div class="header2">
+                <h5>You can Find Anywhere, just fill the form we're there</h5>
+            </div>
+
+            <div class="namebox">
+                <input type="text" id="name" placeholder="First Name..*">
+                <input type="text" id="last" placeholder="last Name..*">
+            </div>
+            <div class="emailbox">
+                <input type="email" id="email" placeholder="Email..*">
+            </div>
+            <div class="numberbox">
+                <input type="text" id="number" placeholder="Number..*">
+            </div>
+            <div class="messagebox">
+                <textarea type="text" id="message" placeholder="Message For us..*"></textarea>
+            </div>
+            <div class="buttonbox">
+                <input type="button" id="button" value="send">
+            </div>
+        </div>
+</body>
+</html>

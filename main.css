@@ -25,7 +25,7 @@
     position:absolute;
 }
 
-.mainContainer .logo{
+.logo{
     font-family: "Dancing Script", serif;
     font-size: 30px;
 
@@ -38,12 +38,26 @@
 a{
     text-decoration: none;
 }
+.Logout{
+    background-color: black;
+    color: wheat;
+    height: 27px;
+    display: none;
+}
+
+#LogoutButton1 ,#LogoutButton2{
+    display: none;
+}
 
 button{
     width: 100px;
     border: 1px solid gray;
     border-radius: 10px;
     font-size: 15px;
+}
+
+#LoginButton{
+    display: block;
 }
 
 .animation::after{
@@ -369,9 +383,6 @@ button{
 
     .mainDynamicWeather{
         margin-top: 13px;
-    }
-    
-
-    
+    }   
     
 }

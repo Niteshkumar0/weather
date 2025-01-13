@@ -1,0 +1,61 @@
+
+.navbarContainer{
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    position:absolute;
+}
+
+.logo{
+    font-family: "Dancing Script", serif;
+    font-size: 30px;
+
+}
+
+.navbarContainer .navbar{
+    display: none;
+}
+
+a{
+    text-decoration: none;
+}
+.Logout{
+    background-color: black;
+    color: wheat;
+    height: 27px;
+    display: none;
+}
+
+#LogoutButton1 ,#LogoutButton2{
+    display: none;
+}
+
+button{
+    width: 100px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+#LoginButton{
+    display: block;
+}
+
+.animation::after{
+    content: "";
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: black;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;  
+}
+
+.animation:hover::after{
+    transform: scaleX(1);
+ }
+ 
