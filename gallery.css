@@ -1,0 +1,235 @@
+.mainContainer{
+    width: 100%;
+    min-height: 100vh;
+    background-color:#87CEFA;
+}
+.mainBackgroundVideo{
+    position:fixed;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbarContainer{
+    background-color: #F5F7FA;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    color: #2F4F4F;
+}
+
+.logo{
+    font-family: "Dancing Script", serif;
+    font-size: 30px;
+    color: #2F4F4F;
+}
+
+.navbarContainer .navbar{
+    display: none;
+}
+
+a{
+    text-decoration: none;
+    color: #2F4F4F;
+
+}
+.Logout{
+    background-color: black;
+    color: wheat;
+    height: 27px;
+    display: none;
+}
+
+#LogoutButton1 ,#LogoutButton2{
+    display: none;
+}
+
+button{
+    width: 100px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    font-size: 15px;
+    background-image: linear-gradient(#4A90E2, #56CCF2);
+    color: white;
+}
+
+#LoginButton{
+    display: block;
+}
+
+.animation::after{
+    content: "";
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: #87CEFA;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;  
+}
+
+.animation:hover::after{
+    transform: scaleX(1);
+ }
+
+ .galleryContainer{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+ }
+ .galleryBox{
+    border: 1px solid;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+ }
+ .galleryContainer .galleryBox div{
+    border: 1px solid;
+    min-height: 50px;
+ }
+
+
+.footerContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 40%;
+    width: 100%;
+    gap: 30px;
+    padding: 40px 0;
+    /* position:fixed;
+    background-color: aliceblue; */
+    position:absolute;
+    background-color: white;
+}
+
+.footerContainer .footerLogo{
+    font-size: 30px;
+    font-family: "Dancing Script", serif;
+
+}
+
+
+.footerContainer .footerNavbar{
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.footerContainer .footerNavbar a{
+    color: black;
+}
+
+
+
+.hamburgerNavbar{
+    background-color: antiquewhite;
+    padding-top: 70px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: fixed; /* Position it outside the .dataContainer */
+    top: 0%; /* Adjust as needed */
+    z-index: 10;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hamburgerNavbar div{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
+    gap: 20px;
+    font-size: 20px;
+    padding-top: 50px;
+    padding-left: 50px;
+}
+
+.hamburgerNavbar div button{
+    padding: 5px;
+}
+
+.hamburgerNavbar div a{
+    color: black;
+}
+
+#hamburgerNavbar{
+    display: none;
+
+}
+
+#hambugerCrossImage{
+    display: none;
+}
+
+
+@media (min-width:650px) {
+    .navbarContainer .navbar{
+        display: flex;
+        gap: 11px;
+        font-size: 16px;
+    }
+
+    .navbarContainer{
+        padding: 0 30px;
+    }
+
+
+    .footerContainer .footerNavbar{
+        flex-direction: row;
+        gap: 20px;
+
+    }
+
+    .footerContainer {
+        height: 27%;
+        
+    }
+
+    .hamburger{
+        display: none;
+    }
+    
+}
+
+@media (min-width:780px) {
+    .navbarContainer .navbar{
+        gap: 15px;
+        font-size: 18px;
+    }
+}
+
+@media (min-width:949px) {
+    .weatherContainer{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 30px;
+        padding-bottom: 40px;
+    }
+
+    .mainDynamicWeather{
+        margin-top: 13px;
+    }   
+    
+}

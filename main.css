@@ -1,9 +1,7 @@
 .mainContainer{
     width: 100%;
     min-height: 100vh;
-    /* background-color: aqua; */
-    background: url('./weatherpic.webp') no-repeat ;
-    background-size: cover;
+    background: linear-gradient(rgb(135, 206, 235), rgb(255, 255, 255));
 }
 .mainBackgroundVideo{
     position:fixed;
@@ -15,7 +13,6 @@
 }
 
 .navbarContainer{
-    background-color: antiquewhite;
     display: flex;
     justify-content: space-between;
     padding: 0 20px;
@@ -23,6 +20,9 @@
     width: 100%;
     height: 10%;
     position:absolute;
+    /* color: #2F4F4F; */
+    color: white;
+    background-color: rgb(44, 62, 80);
 }
 
 .logo{
@@ -37,6 +37,8 @@
 
 a{
     text-decoration: none;
+    color: white;
+
 }
 .Logout{
     background-color: black;
@@ -54,6 +56,8 @@ button{
     border: 1px solid gray;
     border-radius: 10px;
     font-size: 15px;
+    background-image: linear-gradient(#4A90E2, #56CCF2);
+    color: white;
 }
 
 #LoginButton{
@@ -65,7 +69,7 @@ button{
     display: block;
     height: 4px;
     width: 100%;
-    background-color: black;
+    background-color: #87CEFA;
     transform: scaleX(0);
     transition: transform 0.3s ease;  
 }
@@ -107,6 +111,7 @@ button{
     background-color: aliceblue; */
     position:absolute;
     background-color: white;
+    border: 1px solid rgb(166, 164, 164);
 }
 
 .footerContainer .footerLogo{
@@ -186,11 +191,14 @@ button{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 1px solid black;
     background-color: azure;
 }
 
+.mainKarachiWeatherBox:hover,.mainLahoreWeatherBox:hover, .mainDaharkiWeatherBox:hover, .mainDynamicWeatherBox:hover{
+    transform: scale(1.05);
+    transition: 0.3s;
 
+}
 
 .mainLahoreWeather{
     /* border: 1px solid; */
@@ -211,16 +219,13 @@ button{
 .mainLahoreWeather .mainLahoreWeatherBox{
     /* border: 1px solid; */
     width: 80%;
-    border: 1px solid black;
     background-color: azure;
-
     width: 80%;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 1px solid black;
 }
 
 .mainDaharkiWeather{
@@ -242,14 +247,12 @@ button{
 .mainDaharkiWeather .mainDaharkiWeatherBox{
     /* border: 1px solid; */
     width: 80%;
-    border: 1px solid black;
     width: 80%;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 1px solid black;
     background-color: azure;
 
 }
@@ -275,14 +278,12 @@ button{
     /* border: 1px solid; */
     width: 80%;
     margin: 0 auto;
-    border: 1px solid black;
     width: 80%;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 1px solid black;
     background-color: azure;
 
 }
