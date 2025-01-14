@@ -1,7 +1,9 @@
 .mainContainer{
     width: 100%;
     min-height: 100vh;
-    background-color:#87CEFA;
+    background:linear-gradient(to bottom, #87CEEB, #FFFFFF);
+
+
 }
 .mainBackgroundVideo{
     position:fixed;
@@ -13,20 +15,21 @@
 }
 
 .navbarContainer{
-    background-color: #F5F7FA;
+    background-color: #2C3E50;
     display: flex;
     justify-content: space-between;
     padding: 0 20px;
     align-items: center;
     width: 100%;
-    height: 80px;
-    color: #2F4F4F;
+    height: 10%;
+    position:absolute;
+    color: white;
 }
 
 .logo{
     font-family: "Dancing Script", serif;
     font-size: 30px;
-    color: #2F4F4F;
+
 }
 
 .navbarContainer .navbar{
@@ -35,8 +38,7 @@
 
 a{
     text-decoration: none;
-    color: #2F4F4F;
-
+    color: white;
 }
 .Logout{
     background-color: black;
@@ -58,6 +60,7 @@ button{
     color: white;
 }
 
+
 #LoginButton{
     display: block;
 }
@@ -67,7 +70,7 @@ button{
     display: block;
     height: 4px;
     width: 100%;
-    background-color: #87CEFA;
+    background-color:#FFD700;
     transform: scaleX(0);
     transition: transform 0.3s ease;  
 }
@@ -76,27 +79,36 @@ button{
     transform: scaleX(1);
  }
 
- .galleryContainer{
-    width: 100%;
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
- }
- .galleryBox{
-    border: 1px solid;
-    width: 80%;
+.galleryContainer{
+    padding-top: 100px;
+}
+ 
+.GalleryPics{
     display: flex;
     flex-direction: column;
     gap: 40px;
- }
- .galleryContainer .galleryBox div{
-    border: 1px solid;
-    min-height: 50px;
- }
+    padding: 0 10px;
+    width: 90%;
+}
 
+.GalleryPic2 div, .GalleryPic4 div{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.GalleryPics div{
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    box-shadow: 1px 1px 5px black;
+    margin-bottom: 18px;
+
+}
+
+
+.GalleryPics {
+    margin: 0 auto;
+}
 
 .footerContainer{
     display: flex;
@@ -111,6 +123,7 @@ button{
     background-color: aliceblue; */
     position:absolute;
     background-color: white;
+    border: 1px solid rgb(168, 168, 168);
 }
 
 .footerContainer .footerLogo{
@@ -135,7 +148,7 @@ button{
 
 
 .hamburgerNavbar{
-    background-color: antiquewhite;
+    background-color: rgb(44, 62, 80);
     padding-top: 70px;
     width: 80%;
     display: flex;
@@ -170,9 +183,6 @@ button{
     padding: 5px;
 }
 
-.hamburgerNavbar div a{
-    color: black;
-}
 
 #hamburgerNavbar{
     display: none;
@@ -211,12 +221,31 @@ button{
         display: none;
     }
     
+    .GalleryPics{
+
+        width: 70%;
+    }
+
+    .galleryContainer{
+        padding-top: 150px;
+    }
+
+    .GalleryPics div{
+        margin-bottom: 23px;
+    
+    }
+    
 }
 
 @media (min-width:780px) {
     .navbarContainer .navbar{
         gap: 15px;
         font-size: 18px;
+    }
+
+    .GalleryPics div{
+        margin-bottom: 25px;
+    
     }
 }
 
@@ -231,5 +260,17 @@ button{
     .mainDynamicWeather{
         margin-top: 13px;
     }   
+
+    .GalleryPics{
+        width: 60%;
+    }
+
+    .galleryContainer{
+        padding-top: 180px;
+    }
     
+    .GalleryPics div{
+        margin-bottom: 28px;
+    
+    }
 }

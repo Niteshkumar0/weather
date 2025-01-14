@@ -1,13 +1,28 @@
 async function load () {
     let local =await localStorage.getItem("username");
-    if(!local){
-        alert("first login then visit website")
-        window.location.href = "http://127.0.0.1:5500/weather/main.html"
+    if(local){
+        document.getElementById('aboutLoginButton1').style.display = 'none'
+        document.getElementById('aboutLoginButton2').style.display = 'none'
+        document.getElementById('aboutRegisterButton1').style.display = 'none'
+        document.getElementById('aboutRegisterButton2').style.display = 'none'
+        document.getElementById('aboutLogoutButton1').style.display = 'block'
+        document.getElementById('aboutLogoutButton2').style.display='block';
     }
-
 }
 
 load()
+
+
+function logout() {
+    localStorage.clear();
+    document.getElementById('aboutLogoutButton1').style.display = 'none'
+    document.getElementById('aboutLogoutButton2').style.display='none';
+    document.getElementById('aboutLoginButton1').style.display = 'block'
+    document.getElementById('aboutLoginButton2').style.display = 'block'
+    document.getElementById('aboutRegisterButton1').style.display = 'block'
+    document.getElementById('aboutRegisterButton2').style.display = 'block'
+}
+
 
 
 function showHamburgerNavbar(){

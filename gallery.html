@@ -8,53 +8,77 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Playwrite+CO+Guides&display=swap" rel="stylesheet">
-<script src="./js.js"></script>
+<script src="./gallery.js"></script>
 </head>
 <body>
 
    <div class="mainContainer">
+
+    <!-- sTART NAVBAR -->
     <div class="navbarContainer">
         <div class="logo">Weather</div>
         <div class="navbar">
                 <a href="./about.html" class="animation">About us</a>
-                <a href="#" class="animation">Gallery</a>
+                <a href="./gallery.html" class="animation">Gallery</a>
                 <a href="#" class="animation">Contact</a>
-                <button id="mainRegisterButton1"><a href="./registration.html">sign up</a></button>
-                <button id="mainLoginButton1"><a href="./login.html">Login In</a></button>
-                <button id="mainLogoutButton1" class="Logout" onclick="logout()">Logout</button>
+                <button id="galleryRegisterButton1"><a href="./registration.html">sign up</a></button>
+                <button id="galleryLoginButton1"><a href="./login.html">Login In</a></button>
+                <button id="galleryLogoutButton1" class="Logout" onclick="logout()">Logout</button>
         </div>
         <div id="hambuger" class="hamburger">
             <img src="./hamburger.png" alt="hamburger" width="40" height="40" id="hambugerImage" onclick="showHamburgerNavbar()">
             <img src="./cross.jpg" alt="" width="40" height="40" id="hambugerCrossImage" onclick="hideHamburgerNavbar()">
         </div>
     </div>
+    <!-- END NAVBAR -->
 
+
+    <!-- MOBILE NAVBAR START -->
     <div class="hamburgerNavbar" id="hamburgerNavbar">
         <div>
-            <a href=". /about.html" class="animation">About us</a>
-            <a href="#" class="animation">Gallery</a>
-            <a href="#" class="animation">Contact</a>
-            <button id="mainRegisterButton2"><a href="./registration.html">sign up</a></button>
-            <button id="mainLoginButton2"><a href="./login.html">Login In</a></button>
-            <button id="mainLogoutButton2" class="Logout" onclick="logout()">Logut</button>
+        <a href=". /about.html" class="animation">About us</a>
+        <a href="#" class="animation">Gallery</a>
+        <a href="#" class="animation">Contact</a>
+        <button id="galleryRegisterButton2"><a href="./registration.html">sign up</a></button>
+        <button id="galleryLoginButton2"><a href="./login.html">Login In</a></button>
+        <button id="galleryLogoutButton2" class="Logout" onclick="logout()">Logut</button>
         </div>
     </div>
+    <!-- MOBILE NAVBAR END -->
 
-    <div class="galleryContainer">
-        <div class="galleryBox">
-            <div>
-                <img src="." alt="">
+        <!-- DATA HERE -->
+        <div class="galleryContainer">
+            <div class="GalleryPic1 GalleryPics">
+                <div>
+                    <img src="./rain.jpg" alt="" width="150px" height="100px">
+                    <p></p>
+                </div>
             </div>
-            <div>dcd </div>
-            <div>ddd</div>
-            <div>dd</div>
+            <div class="GalleryPic2 GalleryPics">
+                <div>
+                    <img src="./rain.jpg" alt="" width="150px" height="100px">
+                    <p></p>
+                </div>
+            </div>
+            <div class="GalleryPic3 GalleryPics">
+                <div>
+                    <img src="./rain.jpg" alt="" width="150px" height="100px">
+                    <p></p>
+                </div>
+            </div>
+            <div class="GalleryPic4 GalleryPics">
+                <div>
+                    <img src="./rain.jpg" alt="" width="150px" height="100px">
+                    <p></p>
+                </div>
+            </div>
         </div>
+
+
+    </div>
     </div>
 
-</div>
-   
-
-    <!-- FOOTER CONATAINER -->
+    <!-- FOOTER CONATAINER START -->
     <div class="footerContainer">
         <div class="footerLogo"><p>Weather</p></div>
         <div class="footerNavbar">
@@ -65,6 +89,7 @@
         </div>
         <div class="footerDescription">Copyright claim@2023 weather</div>
     </div>
+    <!-- FOOTER CONATAINER END -->
    </div>
 </body>
 </html>
