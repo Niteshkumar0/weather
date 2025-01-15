@@ -70,7 +70,7 @@ button{
     display: block;
     height: 4px;
     width: 100%;
-    background-color:#FFD700;
+    background-color: #87CEFA;
     transform: scaleX(0);
     transition: transform 0.3s ease;  
 }

@@ -3,9 +3,9 @@
     min-height: 100vh;
     background: linear-gradient(rgb(135, 206, 235), rgb(255, 255, 255));
 }
-.mainBackgroundVideo{
+/* .mainBackgroundVideo{
     position:fixed;
-}
+} */
 *{
     margin: 0;
     padding: 0;
@@ -27,7 +27,6 @@
 .logo{
     font-family: "Dancing Script", serif;
     font-size: 30px;
-
 }
 
 .navbarContainer .navbar{
@@ -37,7 +36,6 @@
 a{
     text-decoration: none;
     color: white;
-
 }
 .Logout{
     background-color: black;
@@ -108,7 +106,7 @@ button{
 }
 
 .contactFormBox div:nth-child(2) input{
-    width: 49.5%;
+    width: 49.1%;
 }
 
 .contactFormBox div input{
@@ -273,5 +271,4 @@ textarea{
         width: 50%;
     }
 
-    
 }

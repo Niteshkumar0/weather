@@ -18,7 +18,7 @@ function logout() {
     document.getElementById('galleryLogoutButton1').style.display = 'none'
     document.getElementById('galleryLogoutButton2').style.display='none';
     document.getElementById('galleryLoginButton1').style.display = 'block'
-    document.getElementById('galleryLoginButton2').style.display = 'block'
+    document.getElementByxId('galleryLoginButton2').style.display = 'block'
     document.getElementById('galleryRegisterButton1').style.display = 'block'
     document.getElementById('galleryRegisterButton2').style.display = 'block'
 }

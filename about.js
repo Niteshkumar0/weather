@@ -1,29 +1,25 @@
-async function load () {
-    let local =await localStorage.getItem("username");
-    if(local){
-        document.getElementById('aboutLoginButton1').style.display = 'none'
-        document.getElementById('aboutLoginButton2').style.display = 'none'
-        document.getElementById('aboutRegisterButton1').style.display = 'none'
-        document.getElementById('aboutRegisterButton2').style.display = 'none'
-        document.getElementById('aboutLogoutButton1').style.display = 'block'
-        document.getElementById('aboutLogoutButton2').style.display='block';
+async function load() {
+    let local = await localStorage.getItem("username");
+    // Check if local exists and is non-empty
+    if (local && local.trim() !== "") {
+        document.getElementById('aboutLoginButton1').style.display = 'none';
+        document.getElementById('aboutLoginButton2').style.display = 'none';
+        document.getElementById('aboutRegisterButton1').style.display = 'none';
+        document.getElementById('aboutRegisterButton2').style.display = 'none';
+        document.getElementById('aboutLogoutButton1').style.display = 'block';
+        document.getElementById('aboutLogoutButton2').style.display = 'block';
+    } else {
+        // Show login and register buttons if no username is found
+        document.getElementById('aboutLoginButton1').style.display = 'block';
+        document.getElementById('aboutLoginButton2').style.display = 'block';
+        document.getElementById('aboutRegisterButton1').style.display = 'block';
+        document.getElementById('aboutRegisterButton2').style.display = 'block';
+        document.getElementById('aboutLogoutButton1').style.display = 'none';
+        document.getElementById('aboutLogoutButton2').style.display = 'none';
     }
 }
 
-load()
-
-
-function logout() {
-    localStorage.clear();
-    document.getElementById('aboutLogoutButton1').style.display = 'none'
-    document.getElementById('aboutLogoutButton2').style.display='none';
-    document.getElementById('aboutLoginButton1').style.display = 'block'
-    document.getElementById('aboutLoginButton2').style.display = 'block'
-    document.getElementById('aboutRegisterButton1').style.display = 'block'
-    document.getElementById('aboutRegisterButton2').style.display = 'block'
-}
-
-
+load();
 
 function showHamburgerNavbar(){
     document.getElementById('hamburgerNavbar').style.display = 'block';

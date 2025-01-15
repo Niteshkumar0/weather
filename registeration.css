@@ -4,15 +4,16 @@ body {
     align-items: center;
     width: 100%;
     height: 100vh;
-    background-color: antiquewhite;
+    background: linear-gradient(rgb(135, 206, 235), rgb(255, 255, 255));
 }
 .RegisterConatiner {
-    height: 420px;
+    height: 460px;
     width: 300px;
     border: 1px solid black;
     display: flex;
     flex-direction: column;
     background-color: white;
+    box-shadow: 2px 2px 12px 0px gray;
 }
 .RegisterInput {
     width: 230px;
@@ -33,13 +34,17 @@ body {
 }
 .RegisterButton {
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     width: 245px;
     background-color: black;
     color: white;
     padding-top: 7px;
     padding-bottom: 7px;
     margin-left: 27px;
+}
+.RegisterLoginButton {
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 @media (min-width:593px) {

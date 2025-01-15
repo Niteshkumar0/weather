@@ -4,13 +4,14 @@ body {
     align-items: center;
     width: 100%;
     height: 100vh;
-    background-color: antiquewhite;
+    background: linear-gradient(rgb(135, 206, 235), rgb(255, 255, 255));
 }
 .LoginContainer {
     height: 420px;
     width: 300px;
     border: 1px solid black;
     background-color: white;
+    box-shadow: 2px 2px 12px 0px gray;
 }
 .LoginHeading {
     text-align: center;

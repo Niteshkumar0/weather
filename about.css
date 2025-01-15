@@ -173,6 +173,7 @@ button{
 }
 .AboutLine {
     margin-bottom: 25px;
+    margin-top: 20px;
     color: gray;
 }
 @media (min-width:600px) {
@@ -196,7 +197,7 @@ button{
     }
 }
 
-@media (min-width:650px) {
+@media (min-width:700px) {
     .navbarContainer .navbar{
         display: flex;
         gap: 11px;
