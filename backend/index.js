@@ -6,11 +6,10 @@ let mongoose = require('mongoose');
 
 
 const corsOptions = {
-    origin: ['https://weather-rouge-two.vercel.app'],  
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],  
-    allowedHeaders: ['Content-Type', 'Authorization'],  
+    origin: 'https://weather-rouge-two.vercel.app',  
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],     
+    headers: ['Content-Type', 'Authorization'],  
   };
-  
   
 app.use(cors(corsOptions))
 app.use(express.json())
