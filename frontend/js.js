@@ -129,7 +129,7 @@ async function sendRegisterData(){
         if(res.ok){
             let data = await res.json()
             alert(data.message)
-            window.location.href  = "https://weather-w58k.vercel.app/login.html"
+            window.location.href  = "https://weather-rouge-two.vercel.app/"
             
         }else{
             let error =  await res.text()
@@ -169,7 +169,7 @@ async function LoginData() {
             let data = await res.json()
             alert(data.message)
             localStorage.setItem('username',data.name)
-            window.location.href  = "https://weather-w58k.vercel.app/index.html"
+            window.location.href  = "https://weather-rouge-two.vercel.app"
             
         }else{
             let error =  await res.text()
