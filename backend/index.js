@@ -96,4 +96,5 @@ app.post('/login', async (req,res)=>{
 
 connectDatabase();
 
-module.exports = app;
+
+app.listen(3001);
