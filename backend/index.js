@@ -6,6 +6,10 @@ app.use(cors())
 app.use(express.json())
 
 
+app.get("/",(req,res)=>{
+    res.send("suuccesfully running backend");
+})
+
 //DataBase
 async function connectDatabase() {
   await  mongoose.connect('mongodb+srv://admin:uniWeather4545@cluster0.6kkzw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
@@ -38,7 +42,7 @@ let User = mongoose.model('User',userSchema)
 
 app.post("/register",async (req,res)=>{
     let {username,email,password,confirmPassword}= req.body;
-    console.log(username);
+    // console.log(username);
     if (!username) {
        return res.status(400).send("enter name")
     }else if(!email){
@@ -74,7 +78,7 @@ app.post('/login', async (req,res)=>{
 
     let checkUser = await User.findOne({email});
 
-    console.log(checkUser);
+    // console.log(checkUser);
     if(!checkUser){
         return res.status(400).send('user not found');
     }
