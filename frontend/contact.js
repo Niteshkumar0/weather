@@ -12,6 +12,9 @@ async function load () {
 
 load()
 
+function samePage(){
+    window.location.href = "https://weather-rouge-two.vercel.app/contact.html"
+}
 
 function logout() {
     localStorage.clear();

@@ -57,6 +57,19 @@ button{
     color: white;
 }
 
+.contactSubmit{
+    width: 100px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    font-size: 15px;
+    background-image: linear-gradient(#4A90E2, #56CCF2);
+    color: white;
+}
+
+.contactSubmit:hover{
+    cursor: pointer;
+}
+
 #LoginButton{
     display: block;
 }
