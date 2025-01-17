@@ -118,7 +118,7 @@ async function sendRegisterData(){
     }
 
     try {
-        let res = await fetch('http://localhost:3001/register',{
+        let res = await fetch('https://backend777-bk60atac6-niteshgoindani46gmailcoms-projects.vercel.app/register',{
         method:'POST',
         headers:{
             'Content-Type':'application/json'
@@ -157,7 +157,7 @@ async function LoginData() {
     // console.log(user)
 
     try {
-        let res = await fetch('http://localhost:3001/login',{
+        let res = await fetch('https://backend777-bk60atac6-niteshgoindani46gmailcoms-projects.vercel.app/login',{
         method:'POST',
         headers:{
             'Content-Type':'application/json'
