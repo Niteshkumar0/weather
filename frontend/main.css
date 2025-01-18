@@ -67,16 +67,18 @@ button{
 .animation::after{
     content: "";
     display: block;
-    height: 4px;
     width: 100%;
-    background-color: #87CEFA;
+    height: 4px;
+    background-color:white;
     transform: scaleX(0);
-    transition: transform 0.3s ease;  
+    transition: transform 0.3s ease;
 }
 
 .animation:hover::after{
     transform: scaleX(1);
- }
+
+}
+
  
 .dataContainer{
     width: 100%;
@@ -142,6 +144,7 @@ button{
 .mainSearch div {
     background-color: white;
     width: 230px;
+    display: flex;
     border-radius: 10px;
     height: 38px;
     padding: 10px;
